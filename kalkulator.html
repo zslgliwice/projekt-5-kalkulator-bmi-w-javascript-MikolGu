@@ -1,34 +1,37 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-
-	<meta charset="utf-8">
-	<title>Kalkulator BMI</title>
-	<meta name="description" content="">
-	<meta name="keywords" content="">
-	<meta name="author" content="">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">	
-	<meta http-equiv="X-Ua-Compatible" content="IE=edge">
-	
-	<link rel="stylesheet" href="main.css">
-	
-	<!--[if lt IE 9]>
-	<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
-	<![endif]-->
-	
+    <meta charset="utf-8">
+    <title>Kalkulator BMI</title>
+    <meta name="description" content="Kalkulator BMI - oblicza index masy ciała, który jest stosunkiem masy do wzrostu (określa, czy jesteś za chudy, normalny, czy za gruby XD)">
+    <meta name="keywords" content="BMI, Nadwaga, Niedowaga, Waga prawidłowa">
+    <meta name="author" content="Mikołaj Guzek">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-Ua-Compatible" content="IE=edge">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
 </head>
-
 <body>
-	
-	<main>
-	<article>
-		
+    <main>
+        <article>
+            <form>
+                <p>Oblicz swoje BMI</p>
+                <input type="number" id="wzrost" placeholder="Wzrost (w metrach, np. 1.75)">
+                <input type="number" id="waga" placeholder="Waga (w kilogramach, np. 70)">
+                <input type="button" value="Oblicz" onclick="Oblicz()">
+            </form>
 
-		
-	</article>	
-	</main>
-	
-	<script src="skrypt.js"></script>
-
+            <div id="wynik" style="display:none;">
+                Twoje BMI wynosi: <span id="wartoscBMI"></span><br/>
+                <br />
+                <br />
+                <span id="komunikatBMI"></span>
+                <div id="kwadrat"></div>
+            </div>
+        </article>
+    </main>
+    <script src="skrypt.js"></script>
 </body>
 </html>
